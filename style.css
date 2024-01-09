@@ -1,0 +1,370 @@
+body{
+    margin: 0;
+    font-family: 'Instrument Serif', serif;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+
+    background-color: #f5f5f5; /* Adjust as needed */
+  }
+  
+  .nav-bar-title img {
+    height: 30px; /* Adjust as needed */
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #333; /* Adjust as needed */
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-icons a {
+    margin-left: 1rem;
+  }
+
+  .ss-img{
+    max-width: 100%;
+}
+  .pink{
+    width: 100%;
+    padding: 20px;
+    background: #87406d;
+    color: #fff;
+    text-align: center;
+  }
+
+  .left{
+    color: #87406d;
+    font-size:18px;
+  }
+  .hamburger{
+    display: none;
+  }
+  
+
+  
+
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+
+* {
+  font-family: "Raleway";
+  box-sizing: border-box;
+}
+
+.top-nav {
+  display: flex;
+  color: #fff;
+  background: #f5f5f5;
+  font-weight: 600;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 2em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+  color:rgb(55, 62, 62) ;
+  font-weight: 700;
+  align-items: center;
+  font-size: larger;
+  text-transform: capitalize;
+}
+.menu > li .nav-contact-btn
+{
+  padding: 10px 20px;
+  background-color: #00a8b6;
+  border: 1px solid rgba(0,0,0,0);
+  color: #fff;
+  font-weight: 600;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+  z-index: 999;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: black;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    z-index: 999;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    /* border: 1px solid #; */
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: left;
+    margin: 0;
+    padding: 0.5em;
+    width: 100%;
+    color: black;
+    background-color:aliceblue;
+  }
+  .menu > li .nav-icon
+  {
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-icon::before
+  {
+   content: 'hello'; 
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+  
+  .toggleMain{
+    display: block;
+  }
+  .description{
+    overflow:hidden;
+    max-height: 8.5em;
+    margin-bottom: 20px;;
+  }
+}
+
+
+/* General styling */
+
+
+.country-content{
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.call-to-action{
+  color: black;
+  border: 1px solid #87406d;
+  padding: 20px;
+}
+
+.booking-form{
+  background-color: #333; /* Adjust color if needed */
+  padding: 20px;
+  color: #FFF;
+}
+
+.description{
+  /* overflow:hidden;
+  max-height: 8.5em; */
+  margin-bottom: 20px;;
+}
+
+.read-more-trigger-tours {
+  cursor: pointer;
+  color: #00a9b7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.toggleMain{
+  display: block;
+}
+
+main {
+  display: flex; /* Consider flexbox or grid for layout */
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  background-color: #007bff; /* Adjust color if needed */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Booking form */
+.booking-form h2 {
+  margin-bottom: 20px;
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.booking-form button[type="submit"] {
+  background-color: #007bff; /* Adjust color if needed */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+.hero {
+  position: relative;
+  background: url('ss-\ hero.png') center/cover;
+  height: 300px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.hero .text-container {
+  position: relative;
+  backdrop-filter: blur(10px); 
+  background: rgb(0 0 0 / 68%);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+
+}
+
+.hero h1,
+.hero p {
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+ 
+  font-family: Arial, sans-serif;
+}
